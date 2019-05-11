@@ -18,13 +18,15 @@ import React from "react";
 
 // export default Button;
 
-// import logo from "./logo.svg";
+import logo from "./logo.svg";
 import Header from "./components/Header";
 import Content from "./components/Content";
 import Footer from "./components/Footer";
 import Counter from "./containers/Counter";
 import Form from "./containers/Form";
 import "./App.css";
+import Button from "./components/Button";
+import Geolocation from "./containers/Geoloaction";
 
 const App: React.FC = () => {
 	return (
@@ -38,6 +40,14 @@ const App: React.FC = () => {
 			</Content>
 			<Counter />
 			<Form />
+			<Geolocation />
+			<Button>
+				<img src={logo} alt={"Button logo"} />
+				<span>Click me!</span>
+			</Button>
+			<Button>
+				<span>Click me!</span>
+			</Button>
 			<Footer copyright={`Dev.education ${new Date().getFullYear()}`} />
 		</div>
 	);

@@ -1,16 +1,16 @@
-import React from "react";
+import React from 'react';
 
 interface ItemProps {
 	key: string;
-	title: string;
-	text?: string;
+	item: string;
+	onChange: any;
 }
 
-const Item: React.FC<ItemProps> = ({ key, title, text }) => {
+const Item: React.FC<ItemProps> = ({ key, item, onChange }) => {
 	return (
 		<li key={key}>
-			<h1>{title}</h1>
-			{text && <p>{text}</p>}
+			<h1>{item}</h1>
+			<input type="text" onChange={onChange} />
 		</li>
 	);
 };
